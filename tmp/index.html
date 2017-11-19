@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <!--  <style>
+            .no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+        </style>-->
+    </head>
+    <body>
+        <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">SimpSet</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Hadoop<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#hdfs" data-toggle="modal">HDFS</a></li>
+                                    <li><a href="#mr" data-toggle="modal">MR</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Cloud<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#saas" data-toggle="modal">SAAS</a></li>
+                                    <li><a href="#staas_block" data-toggle="modal">STASS_OBJECT</a></li>
+                                    <li><a href="#stass_object" data-toggle="modal">STASS_BLOCK</a></li>
+                                    <li><a href="#cass" data-toggle="modal">CAAS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Login<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-toggle="modal">SignUp</a></li>
+                                    <li><a href="#login" data-toggle="modal">SignIn</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        <section id="main" class="no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#hdfs" class="gallery-box" data-toggle="modal" data-src="images/1.jpg">
+                        <img src="images/1.jpg" class="img-responsive" alt="Image 1">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#mr" class="gallery-box" data-toggle="modal" data-src="images/2.jpg">
+                        <img src="images/2.jpg" class="img-responsive" alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#stass_object" class="gallery-box" data-toggle="modal" data-src="images/3.jpg">
+                        <img src="images/3.jpg" class="img-responsive" alt="Image 3">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#stass_block" class="gallery-box" data-toggle="modal" data-src="images/4.jpg">
+                        <img src="images/4.jpg" class="img-responsive" alt="Image 4">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#cass" class="gallery-box" data-toggle="modal" data-src="images/5.jpg">
+                        <img src="images/5.png" class="img-responsive" alt="Image 5">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#saas" class="gallery-box" data-toggle="modal" data-src="images/6.jpg">
+                        <img src="images/6.png" class="img-responsive" alt="Image 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="modal">    
+                <div id="hdfs" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Setting up HDFS Cluster</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+                <div id="mr" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Setting up MR Cluster</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+                <div id="stass_object" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Setting up object storage</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+                <div id="stass_block" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Setting up block storage</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+                <div id="caas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>SAAS service</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>            
+                <div id="saas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>SAAS service</p>
+                            <form>
+                                Enter name : <input name='name' required />
+                                <br /><br />
+                                Enter last name: <input name='lname' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+                <div id="login" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Login</p>
+                            <form action="cgi-bin/login1.py">
+                                Enter User name : <input name='userName' required />
+                                <br /><br />
+                                Enter Password: <input type="password" name='userPass' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+        </section>
+         <!--   <script src="section2.js">
+        </script>-->
+    </body>
+</html>

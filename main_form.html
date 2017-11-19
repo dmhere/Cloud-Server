@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SimpSet</title>
+        <link rel='stylesheet' type="text/css" href="css/main_form.css">
+        <script src="javascript/main_form.js"></script>
+    </head>
+    <body >
+        
+        <ul>
+          <li><a id='hdfs_link' href="#hdfs_form" onclick="showform(this.id)">Setup HDFS</a></li>
+          <li><a id='mr_link' href="#mr_form" onclick="showform(this.id)">Setup MR</a></li>
+          <li><a id='stass_link' href="#stass_form" onclick="showform(this.id)">Use StaaS</a></li>
+          <li><a id='iaas_link' href="#iaas_form" onclick="showform(this.id)">Use IaaS</a></li>
+          <li><a id='saas_link' href="#saas_form" onclick="showform(this.id)">Use Softwares</a></li>
+	  <li><a id='caas_link' href="#caas_form" onclick="showform(this.id)">Use CaaS</a></li>
+        </ul>
+
+        <!--<button id='hdfs_link' href="#hdfs_form" onclick="showform(this.id)">Setup HDFS</button>-->
+        <div id='home' style="margin-left:15%;padding:1px 16px;height:1000px;">
+            <div id='hdfs_form_div'>
+                <form id='hdfs_form' method="post" action="/cgi-bin/hdfs_docker_new.py">
+                <fieldset id='hdfs_fieldset'>
+                    <legend>HDFS Setup</legend>
+                    Enter no. of Datanodes : <input id='noofdn' type='text' name='dnNo' placeholder='No. of Datanodes' required />
+                    <br /><br />
+                    Enter size of each datanode(in GB) : <input type='text' name='dnSize' placeholder='size in GB' required />
+                    <br /><br />
+                    How you want to setup :
+                    <br />
+                    <input id='hdfs_od_radio' type='radio' name='type' value='on-demand' onclick="hideInput(this.id)" />on-demand(on docker)<br />
+                    <input id='hdfs_man_radio' type='radio' name='type' value='manual' onclick="displayInput(this.id)" />manual(in your company harddisk) <br /> <br />
+                    <div id='hdfs_manual_radio'></div>
+                    <br />
+                    <input type='submit' value='Setup HDFS' />
+                    <br />
+                 </fieldset>
+            </form>
+            </div>
+            <div id='mr_form_div'>
+                <form id='mr_form' method="post" action='cgi-bin/stass.py'>
+                <fieldset id='mr_fieldset'>
+                    <legend>MR Setup</legend>
+                    Enter no. of TaskTracker : <input id='nooftt' type='text' name='ttno' placeholder='No. of Tasktracker' required />
+                    <br /><br />
+                    Enter Namnode ip : <input type='text' name='nnip' placeholder='Namenode ip' required />
+                    <br /><br />
+                    How you want to setup :
+                    <br />
+                    <input id='mr_od_radio' type='radio' name='type' value='on-demand' onclick="hideInput(this.id)" />on-demand(on docker)<br />
+                    <input id='mr_man_radio' type='radio' name='type' value='manual' onclick="displayInput(this.id)" />manual(in your company harddisk) <br /> <br />
+                    <div id='mr_manual_radio'></div>
+                    <br />
+                    <input type='submit' value='submit query' />
+                    <br />
+                </fieldset>
+            </form>
+            </div>
+            <div id='stass_form_div'>
+                <form id='stass_form' method="post" action="cgi-bin/stass.py">
+                <fieldset id='object_fieldset'>
+                    <legend>STASS Setup</legend>
+                    Enter the storage size : <input type='text' name='storageSize' placeholder='No. of Tasktracker' required />
+                    <br /><br />
+                    Enter ip where you want the storage : <input type='text' name='userIP' placeholder='namanode ip' required />
+                    <br /><br />
+                    Enter ip password of this ip : <input type='password' name='userPassword' placeholder='namanode ip' required />
+                    <br /><br />
+                    How you want the storage :
+                    <br />
+                    <input type='radio' name='type' value='object' onclick="hideInput()" />As object storage<br />
+                    <input type='radio' name='type' value='block' onclick="displayInput()" />As block storage <br /> <br />
+                    <br />
+                    <input type='submit' value='submit query' />
+                    <br />
+                </fieldset>
+            </form>
+            </div>
+            <div id='iaas_form_div'>
+                <form id='iaas_form' method="post" action="cgi-bin/iaas.py">
+                <fieldset id='iaas_fieldset'>
+                    <legend>IAAS</legend>
+                        Enter ur OS name <input name='osname' required /> <br /> <br />
+                        Enter RAM size in MB <input name='ramsize' required /> <br /> <br />
+                        Enter no. of CPU <input name='cpunumber' required />  <br /> <br />
+                        Enter storage size  <input name='storagesize' required />  <br /> <br />
+                        select ur os :
+
+                        <select name='ostype'>
+                        <option>centos</option>
+                        <option>rhel7</option>
+                        <option>windows</option>
+                        </select>
+
+                    <div id='manual_radio1'></div>
+                    <br />
+                    <input type='submit' value='submit query' />
+                    <br />
+                </fieldset>
+            </form>
+            </div>
+            <div id='saas_form_div'>
+                <form id='saas_form' method="post" action="cgi-bin/saas.py">
+                <fieldset id='saas_fieldset'>
+                    <legend>SAAS</legend>
+                        Enter ur ip <input name='ip' /> <br /> <br />
+                        Enter password <input type="password"name='ippass' /> <br /> <br />
+                        Select software:
+                        <select name='ostype'>
+                        <option>firefox</option>
+                        <option>gedit</option>
+                        <option>gnome</option>
+                        </select>
+
+                    <div id='manual_radio1'></div>
+                    <br />
+                    <input type='submit' value='submit query' />
+                    <br />
+                </fieldset>
+            </form>
+            </div>
+            <div id='caas_form_div'>
+	           <form id='caas_form' method="post" action="cgi-bin/docker_launch.py">
+                <fieldset id='saas_fieldset'>
+                    <legend>CAAS</legend>
+                        Enter the name of container <input name='cname' /> <br /> <br />
+                        Select image:
+                        <select name='imagename'>
+                        <option>centos:latest</option>
+                        <option>ubuntu:14.04</option>
+                        <option>fedora:v2</option>
+                        </select>
+
+                    <div id='manual_radio1'></div>
+                    <br />
+                    <input type='submit' value='submit query' />
+                    <br />
+                </fieldset>
+            </form>
+            </div>
+            <hr />
+        </div>
+        <script>
+            document.getElementById('hdfs_form_div').style.display='block';
+            //a.style.display='block';
+            document.getElementById('mr_form_div').style.display='none';
+            //b.style.display='none';
+            document.getElementById('stass_form_div').style.display='none';
+            //c.style.display='none';
+            document.getElementById('iaas_form_div').style.display='none';
+            //d.style.display='none';
+            document.getElementById('caas_form_div').style.display='none';
+            //e.style.display='none';
+            document.getElementById('saas_form_div').style.display='none';
+            //f.style.display='none';	
+        </script>
+    </body>
+</html>

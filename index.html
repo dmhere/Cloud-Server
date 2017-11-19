@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <!--  <style>
+            .no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+        </style>-->
+    </head>
+    <body>
+        <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">SimpSet</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Hadoop<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#hdfs" data-toggle="modal">HDFS</a></li>
+                                    <li><a href="#mr" data-toggle="modal">MR</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Cloud<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#saas" data-toggle="modal">SAAS</a></li>
+                                    <li><a href="#caas" data-toggle="modal">CAAS</a></li>
+                                    <li><a href="#iaas" data-toggle="modal">IAAS</a></li>
+                                    <li><a href="#staas" data-toggle="modal">STAAS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Login<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-toggle="modal">SignUp</a></li>
+                                    <li><a href="#login" data-toggle="modal">SignIn</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        <section id="main" class="no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#hdfs" class="gallery-box" data-toggle="modal" data-src="images/1.jpg">
+                        <img src="images/1.jpg" class="img-responsive" alt="Image 1">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#mr" class="gallery-box" data-toggle="modal" data-src="images/2.jpg">
+                        <img src="images/2.jpg" class="img-responsive" alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#iaas" class="gallery-box" data-toggle="modal" data-src="images/3.jpg">
+                        <img src="images/3.jpg" class="img-responsive" alt="Image 3">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#caas" class="gallery-box" data-toggle="modal" data-src="images/4.jpg">
+                        <img src="images/4.jpg" class="img-responsive" alt="Image 4">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#staas" class="gallery-box" data-toggle="modal" data-src="images/5.jpg">
+                        <img src="images/5.png" class="img-responsive" alt="Image 5">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#saas" class="gallery-box" data-toggle="modal" data-src="images/6.jpg">
+                        <img src="images/6.png" class="img-responsive" alt="Image 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="modal">    
+                <div id="hdfs" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>About HDFS Cluster and this Service</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can setup a hadoop hdfs cluster in 2 modes either over cloud or locally and then give a dashboard to you to control and watch every activuty of your hdfs cluster.<br />
+                              To start, You just need to provide how much datanodes you want, how much space you want in each datanode, the way you want to proced and that's it. You are good to go.<br />
+                              Enjoy using hdfs.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                              
+                          </div>
+                </div>
+                <div id="mr" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>About MR Cluster and this Service</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can setup a hadoop Mapreduce cluster in 2 modes either over cloud or locally and then give a dashboard to you to perform operations on the cluster<br />
+                              To start, You just need to provide how much tasktracker you want, Your Namenode ip address and password, the way you want to proced and that's it. You are good to go.<br />
+                              Enjoy using mapreduce.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                          </div>
+                </div>
+                <div id="iaas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>Providing Infrastructure</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can get a full working os in your browser.<br />
+                              To start, You just need to provide the basic requirement you want in your os and that's it. You are good to go.<br />
+                              Enjoy using stass.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                          </div>
+                </div>
+                <div id="caas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>Providing Containers</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can run containers using the docker technology and then this service gives you a dashboard to manage your containers.<br />
+                              To start, You just need to provide the unique name of docker, from which image you want to launch it and that's it. You are good to go.<br />
+                              Enjoy using hdfs.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                          </div>
+                </div>
+                <div id="staas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>Providing Storage</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can get storage in 2 ways, first mounted drive on your local pc desktop or as a block storage device.<br />
+                              To start, You just need to provide how much space you want, where you want the storage, the way you want to proced and that's it. You are good to go.<br />
+                              Enjoy using stass.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                          </div>
+                </div>            
+                <div id="saas" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>Providing Softwares</h1>
+                            <p>Hello World <br />
+                              Welcome to the Simpset,<br />
+                              By this service you can gets the software you want and you don't have to worry about all the RAM/CPU required to run that software.<br />
+                              To start, You just need to provide which software you want, where you want the software and that's it. You are good to go.<br />
+                              Enjoy using hdfs.</p>
+                              <img src="images/hadoop-cloud-computing.jpg" class="img-description" alt="Image 6">
+                          </div>
+                </div>
+                <div id="login" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Login</p>
+                            <form action="cgi-bin/login1.py">
+                                Enter User name : <input name='userName' required />
+                                <br /><br />
+                                Enter Password: <input type="password" name='userPass' required />
+                                <br /><br />
+                                <input type="submit" />
+                            </form>
+                          </div>
+                </div>
+        </section>
+         <!--   <script src="section2.js">
+        </script>-->
+    </body>
+</html>
